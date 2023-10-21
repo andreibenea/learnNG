@@ -1,0 +1,8 @@
+<input type="text" class="form-control" (input)="updateUsername($event)" [(ngModel)]="username">
+<br>
+<button type="button" class="btn btn-secondary" (click)="onResetUsername($event)"
+    [disabled]="!usernameExists">Reset</button>
+<hr>
+<p>
+    {{ username }}
+</p>
