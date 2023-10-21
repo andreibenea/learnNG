@@ -3,6 +3,9 @@
 <button type="button" class="btn btn-secondary" (click)="onResetUsername($event)"
     [disabled]="!usernameExists">Reset</button>
 <hr>
-<p>
+<p *ngIf="usernameExists; else show">
     {{ username }}
 </p>
+<ng-template #show>
+    <p>Please add a user</p>
+</ng-template>
